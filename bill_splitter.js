@@ -18,3 +18,18 @@ function calculateTip(bill_size) {
 var TestBillFunction = 100;
 var Test_Tip = calculateTip(TestBillFunction);
 console.log(`The bill was $${TestBillFunction}, the tip was $${Test_Tip}, and the total value is $${TestBillFunction + Test_Tip}`) //Display a message in the console saying the bill amount, the tip amount and how much was the total value when the bill and the tip are added up.
+
+//Task 4-Utilize Arrays
+
+var bills = [125, 555, 44];
+var tips = bills.map(function(bill){
+    return calculateTip(bill)});
+var totals = bills.map(function(bill,index){
+    return bill + tips [index];
+}); 
+// This section of the code will use map to execute the calculateTip function to all the bills in the array and also calculate the total with the respective tips of each bill in the array
+
+console.log(`This are the respective bills`,bills);
+console.log(`This are the respective tips`,tips);
+console.log(`This are the respective totals`,totals);
+//This second part will delivery each persons bill, tip, and total.
